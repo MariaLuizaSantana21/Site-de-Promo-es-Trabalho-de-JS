@@ -9,23 +9,14 @@ body {
     transition: 0.5s;
   }
   
-  header {
-    display: grid;
-    grid-template-columns: 1fr 50px;
-    align-items: center;
+  .produtos{
+    background-color: rgb(107, 69, 42);
+    color: rgb(228, 228, 228);
   }
-  
-  header .produtos {
-    position: relative;
-    text-align: right;
-  }
-  
-  header .produtos img {
-    width: 200px;
-    height: 200px;
-    align-items: left;
-    margin-left: -1px;
-  
+
+  .produtos a{
+    color:rgb(228, 228, 228);
+    text-decoration: none;
   }
   
   h1 {
@@ -43,19 +34,6 @@ body {
     justify-content: center;
   }
   
-  header input {
-    margin-top: 2rem;
-    padding: 1rem 1.6rem;
-    border-radius: .8rem;
-  
-    background-color: #444448;
-    border: 0;
-  
-    width: 20%;
-    color: white;
-  
-    font-size: 0.8rem;
-  }
   
   .input-wrapper i {
     position: absolute;
