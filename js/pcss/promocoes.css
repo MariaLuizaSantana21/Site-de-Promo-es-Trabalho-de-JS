@@ -7,21 +7,32 @@ body {
     margin: auto;
     transition: 0.5s;
   }
+
+  
   
   .produtos{
     background-color: rgb(107, 69, 42);
     color: rgb(228, 228, 228);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 48px;
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-bottom: 3px;
+
+  }
+  .price{
+    color: #757676;
+    text-decoration: line-through;
+    font-size: 12px;
+
   }
 
   .produtos a{
     color:rgb(228, 228, 228);
     text-decoration: none;
   }
-  .produtos{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
 
   h1 {
     font-size: 75px;
@@ -29,6 +40,10 @@ body {
     text-align: center;
     color: rgb(73, 45, 8);
   
+  }
+
+  .title{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   }
   
   .Final{
@@ -46,7 +61,7 @@ body {
     display: flex;
     justify-content: center;
     height: 30px;
-    padding: 20px;
+    padding: 10px;
   }
   
   
@@ -82,7 +97,7 @@ body {
     font-weight: 600;
   }
   
-  .list .item .price {
+  .list .item .atualprice {
     margin: 10px;
     font-family: sans-serif;
   }
@@ -155,4 +170,14 @@ body {
   
   .invisivel {
     display: none;
+  }
+
+  @media (min-width: 1200px) {
+    body {
+        font-size: 18px;
+    }
+
+    header {
+        padding: 40px;
+    }
   }

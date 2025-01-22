@@ -4,6 +4,7 @@ export const produtos = [
       title: 'Café com Leite',
       imagem: 'img1.jpg',
       description:'',
+      atualprice: 'R$ 8,00',
       price: 'R$ 10,00'
     },
     {
@@ -11,6 +12,7 @@ export const produtos = [
       title: 'Chocolate Quente Tradicional',
       imagem: 'img2.jpg',
       description:'',
+      atualprice: 'R$ 10,00',
       price: 'R$ 15,00'
     },
     {
@@ -18,6 +20,7 @@ export const produtos = [
       title: 'Brownie com sorvete de creme',
       imagem: 'img3.jpg',
       description:'', 
+      atualprice: 'R$ 12,00',
       price: "R$ 20,00"
     },
     {
@@ -25,6 +28,7 @@ export const produtos = [
       title: 'Sanduiche Misto',
       imagem: 'img4.png',
       description:'',
+      atualprice: 'R$ 5,00',
       price: "R$ 8,00"
     },
     {
@@ -32,6 +36,7 @@ export const produtos = [
       title: 'Petit Gâteau com sorvete de creme',
       imagem: 'img5.jpg',
       description:'',
+      atualprice: 'R$ 15,00',
       price: "R$ 25,00"
     },
     {
@@ -39,6 +44,7 @@ export const produtos = [
       title: 'Croissants Tradicional',
       imagem: 'img6.jpg',
       description:'',
+      atualprice: 'R$ 12,00',
       price: 'R$ 16,00'
     }
   ];
