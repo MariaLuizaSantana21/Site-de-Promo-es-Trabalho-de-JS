@@ -1,6 +1,5 @@
 body {
-    background-color: #E3E7E8;
-    font-family: system-ui;
+    background-color:  rgb(240, 236, 223);
   }
   
   .container {
@@ -18,7 +17,12 @@ body {
     color:rgb(228, 228, 228);
     text-decoration: none;
   }
-  
+  .produtos{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
   h1 {
     font-size: 75px;
     align-content: center;
@@ -27,11 +31,22 @@ body {
   
   }
   
-  
+  .Final{
+    background-color: rgb(107, 69, 42);
+    padding: 10px;
+    color: rgb(228, 228, 228);
+    text-align: center;
+}
+  footer{
+    padding-top: 90px;
+  }
+
   .input-wrapper {
     position: relative;
     display: flex;
     justify-content: center;
+    height: 30px;
+    padding: 20px;
   }
   
   
@@ -69,6 +84,7 @@ body {
   
   .list .item .price {
     margin: 10px;
+    font-family: sans-serif;
   }
   
   .list .item button {
