@@ -1,61 +1,214 @@
 <!DOCTYPE html>
-<html lang="pt">
-
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>promoções</title>
-  <link rel="stylesheet" href="./js/pcss/promocoes.css">
-  <style>
-    .produtos{
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-    }
-</style>
-</head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel=" stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel=" stylesheet" href="./css/style.css">
+    <title>Document</title>
 
-<body class="">
- 
-  <div class="produtos">
-    <img src="./imag/img9.png" style="width:100px; height:100px; border-radius: 50px;">
-    <a href="./src/pages/index.html"><h3>Inicio</h3></a>
-    <a href="./src/pages/cardapio.html"><h3>Cardápio</h3></a>
-    <a href="./src/pages/contato.html"><h3>Contato</h3></a>
-    <h3>Promoções</h3></a>
-  </div>
-  <div class="container">
-    <header>
+    <style>
+        .text-topo{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        
+        .sobre-text{
+          padding: 50px;
+        }
+        
+        footer{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+          
+            
+        }
+        .social ul{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            gap:35px;
+            margin: 25px;
+            margin-bottom: 25px;
+            justify-items: center;
+            padding-left: 0px;
+
+            list-style: none;
+        }
+        
+        .social ul a{
+          color: gray;
+          text-decoration: none;
+        }
+        .social ul a:hover{
+          color: rgb(107, 69, 42);
+          background-color: 2px solid rgb(107, 69, 42);
+          
+        }
+
+        
+    
+   
+        
+        .fotos {
+           display: flex;
+           flex-direction: row;
+           justify-content: space-around;
+           align-content: center;
+           align-items: center;
+           margin-left: 100px;
+           column-gap: 100px;
+           flex-wrap: wrap;
+          
+        }
+
       
 
-      <div class="input-wrapper">
-        <input id="pesquisa" type="search" placeholder="Pesquisa">
-        <i class="ph-magnifying-glass"></i>
+    </style>
+
+</head>
+<body>
+    <header>
+        
+        <div class="text-topo">
+          <img src="./imgs/logo.png" style="width:100px; height:100px; border-radius: 50px;">
+          <h3>Inicio</h3>
+          <a href="./cardapio.html"><h3>Cardápio</h3></a>
+          <a href="./contato.html"><h3>Contato</h3></a>
+          <a href="./promocoes.html"><h3>Promoções</h3></a>
       </div>
-
+      
     </header>
-    <h2>Itens em Promoção</h2>
-    <div class="list">
+   
+    <main>
+      <section class="Sobre">
+        <h1>Espresso Café</h1>
+      </section>
+      <section class=" sobre-text"> 
+        <h1>Sobre Nós</h1>
+        <p>Bem-vindo ao Espresso Café!</p>
+        <p>No coração da nossa cidade, o Espresso Café é um refúgio
+         para os amantes de café e para aqueles que buscam um ambiente
+         acolhedor e inspirador. Fundado em 2017,
+         nosso café é mais do que um lugar para tomar café - é um espaço onde histórias são compartilhadas e memórias são criadas.
+        <p><b>Nossa Jornada:</b> O Espresso Café começou como um sonho de criar um espaço onde as pessoas 
+          pudessem se reunir, relaxar e desfrutar de um bom café. Desde então, temos nos dedicado a 
+          oferecer produtos de alta qualidade e um atendimento caloroso e personalizado
+          para tomar café.</p>
+        <p><b>Nossa Missão:</b>Oferecer uma experiência única, combinando sabores
+         excepcionais com um ambiente aconchegante e amigável.
+         Acreditamos que cada xícara de café
+          conta uma história, e queremos fazer parte da sua.</p>
+      </section>
+          
+          <section class="card">
+            <h1>Cardápio:</h1>
+          </section>
+     <section class="Cardapio">
+         <section class="cafe">
+           <h3>Café:</h3>
+             <p>Espresso</p>
+             <p>Cappuccino</p>
+             <p>Americano</p>
+             <p>Macchiato</p>
+             <p>Latte</p>
+             <h3>Bebidas:</h3>
+             <p>Chás</p>
+             <p>Sucos Naturais</p>
+             <p>Chocolates:(Chocolate Quente Tradicional, Dois Amores, 
+                 Chocolate Gelado e Chocolate com Nutella.)</p>
+             <p>Água Mineral com e sem gás</p>
+         </section>    
+         <section class=" salgado1">
+          <h3>Pão de Queijo</h3>
+          <h3>Salgados Diversos:</h3>
+            <p>Coxinha</p>
+            <p>Pasteis</p>
+            <p>Empadas(Queijo, Frango, Camarão)</p>
+          <h3>Croissants:</h3>
+            <p>Tradicional</p>
+            <p>Misto</p>
+            <p>Nutella</p>
+          <h3>Folhados:</h3>
+            <p>Queijo</p>
+            <p>Frango</p>
+            <p>Misto</p>
+         </section>
 
-    </div>
-  </div>
-  <div class="card">
-    <h1>Card</h1>
-    <ul class="listCard">
-    </ul>
+          <section class=" sobremesa">
+            <h3>Sanduiches:</h3>
+            <p>Frango</p>
+            <p>Queijo</p>
+            <p>Atum</p>
+            <p>Misto</p>
+           <h3>Sobremesas:</h3>
+             <p>Brownie servido com sorvete de creme</p>
+             <p>Petit Gâteau servido com sorvete de creme</p>
+             <p>Macarons</p>
+             <p>Tortas</p>
+             <p>Bolo Simples</p>
+          </section>
+     </section>
+
+     <h1 class="text-fotos">Galeria de fotos:</h1>
+     <section class="fotos"> 
+      <section class="foto2">
+        <img src="https://blog.bicafebrasil.com.br/wp-content/uploads/2021/04/6-BCF-Cafe-com-leite-e-um-alimento-completo.jpg" style="width:300px; height:300px;">
+        <img src="https://dhg1h5j42swfq.cloudfront.net/2017/01/18142635/caf%C3%A9-expresso.png" style="width:300px; height:300px;">
+        <img src="https://cdn0.tudoreceitas.com/pt/posts/7/0/4/chocolate_quente_com_nutella_11407_orig.jpg" style="width:300px; height:300px;">
+      </section>
+
+      <section class="foto1">
+        <img src="https://bulebar.com.br/wp-content/uploads/2018/10/MISTO-QUENTE-BULEBAR-POSTBLOG-CAPABLOG.png" style="width:300px; height:300px;">
+        <img src="https://imagens.jotaja.com/produtos/d7077f25-ad7d-4c08-b402-c37db6a2fe1b.jpg" style="width:300px; height:300px;">
+        <img src="https://pratofundo.com/wp-content/uploads/torta-chocolate-thumb.jpg" style="width:300px; height:300px;">
+      </section>
+      <section class="foto3">
+        <img src="https://www.academiaassai.com.br/sites/default/files/petit_gateau.jpg" style="width:300px; height:300px;">    
+        <img src="https://anamariabrogui.com.br/assets/uploads/receitas/fotos/usuario-3165-b1eacedcc7ed6e308193504b1cd0fe74.jpg" style="width:300px; height:300px;">
+        <img src="https://amopaocaseiro.com.br/wp-content/uploads/2017/06/receita-de-croissant.jpg" style="width:300px; height:300px;">
+      </section>
+     </section>
+    </main>
+    
+
+    <footer>
+          <section class="foot-title">
+            <h1>Fale conosco:</h1>
+          </section>
+          <section class="adress">
+            <h2><b>Endereço:</b> Av. Primeiro de Maio, 720 - Jaguaribe, João Pessoa-PB, 58015-435</h2>
+          </section>
+
+          <section class="Telefone">
+            <h2><b>Telefone:</b>(83)91234-5678</h2>
+          </section>
 
 
-  </div>
-  </div>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
-    crossorigin="anonymous"></script>
-
-  <script src="./js/js/promocoes.js" type="module"></script>
-
-<footer>
+          <section class=" social">
+            <h1>Siga-nos:</h1>
+            <ul>
+              <li>
+                <a href="#"><i class="fa fa-facebook-official fa-2x" aria-hidden="true"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fa fa-instagram fa-2x" aria-hidden="true"></i></a>
+              </li>
+              <li><a href="#"><i class="fa fa-whatsapp fa-2x" aria-hidden="true"></i></a>
+              </li>
+              
+            </ul>
+          </section> 
+        
+    </footer>
     <section class="Final">
-        <span>@2024 Espresso Café</span>
-      </section> 
-</footer>
+      <span>@2024 Espresso Café</span>
+    </section>
+</body>
+</html>
+
+
