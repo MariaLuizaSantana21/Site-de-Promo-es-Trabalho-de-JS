@@ -25,13 +25,7 @@ function exibirProdutos(produtosParaExibir) {
     list.innerHTML = ''; // Limpa a lista *corretamente*
 
     produtosParaExibir.forEach(produto => { // Use forEach para iterar e adicionar os elementos
-        /*
-        const item = document.createElement('li');
-        item.classList.add('item');
-        item.textContent = `${produto.title} - ${formatarMoeda(produto.atualprice)}`;
-        list.appendChild(item);
-        */
-
+       
         const item = document.createElement('div');
         item.classList.add('item');
         item.innerHTML =  `
