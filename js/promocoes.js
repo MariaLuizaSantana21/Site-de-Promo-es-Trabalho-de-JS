@@ -7,7 +7,7 @@ function initApp() {
         let newLi = document.createElement('div'); // Cria elementos <li>
         newLi.classList.add('item');
         newLi.innerHTML =  `
-            <img src="./imgs/${value.imagem}" 
+            <img src="./img/${value.imagem}" 
             <div class="title">${value.title}</div>
             <div class="atualprice">${value.atualprice.toLocaleString()}</div>
             <div class="price">${value.price.toLocaleString()}</div>
@@ -29,7 +29,7 @@ function exibirProdutos(produtosParaExibir) {
         const item = document.createElement('div');
         item.classList.add('item');
         item.innerHTML =  `
-            <img src="./imgs/${produto.imagem}" 
+            <img src="./img/${produto.imagem}" 
             <div class="title">${produto.title}</div>
             <div class="atualprice">${produto.atualprice.toLocaleString()}</div>
             <div class="price">${produto.price.toLocaleString()}</div>
@@ -52,3 +52,4 @@ function filtrarProdutos() {
 exibirProdutos(produtos); // Exibe todos os produtos inicialmente
 
 pesquisaInput.addEventListener('input', filtrarProdutos);
+
