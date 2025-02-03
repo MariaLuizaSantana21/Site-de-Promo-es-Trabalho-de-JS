@@ -1,5 +1,4 @@
 import { produtos } from './produtos.js';
-/*import { formatarMoeda } from './utils.js';*/
 let list = document.querySelector(".list"); // Seleciona a lista usando querySelector
 
 function initApp() {
