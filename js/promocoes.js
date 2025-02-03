@@ -1,5 +1,5 @@
 import { produtos } from './produtos.js';
-import { formatarMoeda } from './utils.js';
+/*import { formatarMoeda } from './utils.js';*/
 let list = document.querySelector(".list"); // Seleciona a lista usando querySelector
 
 function initApp() {
@@ -16,7 +16,7 @@ function initApp() {
     });
 }
 
-initApp();
+initApp();  
 
 
 const pesquisaInput = document.getElementById('pesquisa');
@@ -25,7 +25,7 @@ function exibirProdutos(produtosParaExibir) {
     list.innerHTML = ''; // Limpa a lista *corretamente*
 
     produtosParaExibir.forEach(produto => { // Use forEach para iterar e adicionar os elementos
-       
+        
         const item = document.createElement('div');
         item.classList.add('item');
         item.innerHTML =  `
@@ -52,4 +52,3 @@ function filtrarProdutos() {
 exibirProdutos(produtos); // Exibe todos os produtos inicialmente
 
 pesquisaInput.addEventListener('input', filtrarProdutos);
-
