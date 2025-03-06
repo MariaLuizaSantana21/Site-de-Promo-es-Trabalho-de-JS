@@ -1,54 +1,62 @@
-import { produtos } from './produtos';
-let list = document.querySelector(".list"); // Seleciona a lista usando querySelector
+import { createClient } from '@supabase/supabase-js';
 
-function initApp() {
-    produtos.forEach((value, index) => {
-        let newLi = document.createElement('div'); // Cria elementos <li>
-        newLi.classList.add('item');
-        newLi.innerHTML =  `
-            <img src="./src/img/${value.imagem}" />
-            <div class="title">${value.title}</div>
-            <div class="atualprice">${value.atualprice.toLocaleString()}</div>
-            <div class="price">${value.price.toLocaleString()}</div>
-            `;
-        list.appendChild(newLi); // Adiciona os <li> à lista
-    });
-}
+const supabaseUrl = 'https://awtnbwcotxogdxpkgode.supabase.co';
+const supabaseAnonKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImF3dG5id2NvdHhvZ2R4cGtnb2RlIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Mzk3Mjc1OTEsImV4cCI6MjA1NTMwMzU5MX0.v_b8AYz8vyQOjHRpTFJ1LmysAALLMv4rE6r3PuR2lNw';
+const supabase = createClient(supabaseUrl, supabaseAnonKey);
 
-initApp();  
-
-
+const list = document.querySelector(".list");
 const pesquisaInput = document.getElementById('pesquisa');
 
+function renderItem(produto) {
+    const item = document.createElement('div');
+    item.classList.add('item');
+    item.innerHTML = `
+        <img src="${produto.imagem}" />
+        <div class="title">${produto.title}</div>
+        <div class="atualprice">${produto.atualprice.toLocaleString()}</div>
+        <div class="price">${produto.price.toLocaleString()}</div>
+    `;
+    return item;
+}
+
 function exibirProdutos(produtosParaExibir) {
-    list.innerHTML = ''; // Limpa a lista *corretamente*
-
-    produtosParaExibir.forEach(produto => { // Use forEach para iterar e adicionar os elementos
-        
-        const item = document.createElement('div');
-        item.classList.add('item');
-        item.innerHTML =  `
-            <img src="./src/img/${produto.imagem}" />
-            <div class="title">${produto.title}</div>
-            <div class="atualprice">${produto.atualprice.toLocaleString()}</div>
-            <div class="price">${produto.price.toLocaleString()}</div>
-            `;
-
-        list.appendChild(item); // Adiciona os <li> à lista
+    list.innerHTML = '';
+    produtosParaExibir.forEach(produto => {
+        list.appendChild(renderItem(produto));
     });
 }
 
-function filtrarProdutos() {
-    const termoPesquisa = pesquisaInput.value.toLowerCase();
+async function initApp() {
+    const { data: produtos, error } = await supabase
+        .from('produtos')
+        .select('*');
 
-    const produtosFiltrados = produtos.filter(produto => {
-        return produto.title.toLowerCase().includes(termoPesquisa) || produto.atualprice.toLowerCase().includes(termoPesquisa); // converte o preço para lowerCase tambem
-    });
+    if (error) {
+        console.error('Erro ao buscar produtos:', error);
+        return;
+    }
+
+    exibirProdutos(produtos);
+}
+
+async function filtrarProdutos() {
+    const termoPesquisa = pesquisaInput.value; // Obtém o valor do input
+
+    const regex = new RegExp(termoPesquisa, 'i'); // Cria a regex
+
+    const { data: produtosFiltrados, error } = await supabase
+        .from('produtos')
+        .select('*')
+        .or(`title.ilike.%${termoPesquisa}%,atualprice.ilike.%${termoPesquisa}%`);
+
+    if (error) {
+        console.error('Erro ao filtrar produtos:', error);
+        return;
+    }
 
     exibirProdutos(produtosFiltrados);
 }
 
-exibirProdutos(produtos); // Exibe todos os produtos inicialmente
+initApp(); // Inicializa a aplicação
 
 pesquisaInput.addEventListener('input', filtrarProdutos);
-
